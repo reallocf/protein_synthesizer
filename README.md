@@ -9,7 +9,7 @@ Proteins are outputted to the stdout in the form of dash-delimited amino acids.
 Appropriate errors are thrown if:
 * There is no input.
 * A strand does not have a start or stop codon.
-* There are any input characters other than 'A', 'C', 'T', or 'G'.
+* There are any input characters other than 'A', 'T', 'C', or 'G'.
 If multiple sequences are given, the other sequences will still give outputs.
 
 Transcription:
@@ -19,5 +19,17 @@ New elements are added until an mRNA stop codon (UAG, UAA, or UGA) is formed.
 
 Translation:
 Each codon in the mRNA strand is then paired with the corresponding anticodon of a tRNA molecule.
-This tRNA molecule then places its corresponding amino acid in the growing polypeptide chain, which is linked together by consecutive tRNA molecules.
+This tRNA molecule then places its corresponding amino acid in the growing polypeptide chain, which is linked together as each consecutive tRNA molecule adds to it.
 This process stops when the mRNA strand ends.
+
+---
+
+To run:
+
+1. Clone this repository.
+
+2. Open the cloned file with your terminal.
+
+3. Type the command "make" and hit enter. I used a makefile for this project to aid in compilation and cleanup.
+
+4. Type "./protein_synthesizer " and the DNA strand you want analyzed. You may also type "sh testing.sh" to run a number of simple tests.
