@@ -26,7 +26,7 @@ This process stops when the mRNA strand ends.
 
 To run:
 
-1. Clone this repository.
+1. Clone/Download this repository.
 
 2. Open the cloned file with your terminal.
 
