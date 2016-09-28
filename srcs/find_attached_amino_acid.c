@@ -1,5 +1,15 @@
 #include "header.h"
 
+
+/* "Smart data structures and dumb code works a lot better than the other way around."
+ * - Eric Raymond (The Cathedral and the Bazaar)
+ *
+ * It looks like you're matching certain char sequences with
+ * certain strings, would be nice if you had some sort of table
+ * that declared the mapping and one function to do the lookup.
+ * (see my program in ./example directory for how that might look)
+ */
+
 void find_attached_amino_acid(t_tRNA *tRNA, t_amino_acid *amino_acid)
 {
   if (tRNA->anticodon[0] == 'A')

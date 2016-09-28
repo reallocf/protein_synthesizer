@@ -4,8 +4,13 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+// Preprocessor directives are cool because you can write compile-time logic.
+// But for run-time logic I try to avoid them, they're hard to debug, hard to read,
+// and more error-prone.
+
 # define IS_START_CODON(DNA1, DNA2, DNA3) (DNA1 == 'T' && \
                                            DNA2 == 'A' && DNA3 == 'C')
+
 # define IS_END_CODON(DNA1, DNA2, DNA3) ((DNA1 == 'A' && \
                                           DNA2 == 'T' && DNA3 == 'T') || \
                                          (DNA1 == 'A' && DNA2 == 'T' && \
