@@ -27,8 +27,13 @@ int main(int argc, char **argv)
   return (0);
 }
 
+// The header #include <unistd.h>
+// defines STDERR_FILENO, which would be a lot clearer to comprehend than `2`.
 void handle_error(void)
 {
+  // Why hard code string length?
+  // Let the compiler worry about that stuff and your code will be more readable and less error prone.
+  // see: fprintf or dprintf
   if (g_error == -1)
     write(2, "System error\n", 13);
   else if (g_error == 1)
